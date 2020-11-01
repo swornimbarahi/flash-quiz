@@ -1,7 +1,7 @@
 // global
 $max-screen-desktop: 1000px;
-$max-screen-tablet: 1000px;
-$max-screen-mobile: 1000px;
+$max-screen-tablet: 600px;
+$max-screen-mobile: 500px;
 
 // border
 $border-radius: 3px;
@@ -9,7 +9,19 @@ $border-radius: 3px;
 // typography
 $font-base-size: 1rem;
 $font-multiplier: 1.1;
+$heading-base-size: 2.4rem;
+$heading-multiplier: 0.85;
+$heading-height-base: 2.8rem;
 $line-height-base: 1.1rem;
+$size-idx: (
+  1: "sm",
+  2: "md",
+  3: "lg"
+);
+@function get-size($key) {
+  @return map-get($size-idx, $key)
+}
+
 
 // spacings
 $padding-base: 2px;

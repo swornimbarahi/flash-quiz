@@ -1,0 +1,44 @@
+@import "./colors";
+@import "./config";
+@import "./functions";
+
+@for $i from 1 to 6 {
+  h#{$i} {
+    font-size: pow($heading-multiplier, $i) * $heading-base-size;
+    line-height: pow($heading-multiplier, $i) * $heading-height-size;
+  }
+}
+
+.text {
+  &--underline {
+    text-decoration: underline;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--capitalize {
+    text-transform: capitalize;
+  }
+
+  &--lowercase {
+    text-transform: lowercase;
+  }
+}
+
+@for $i from 1 to 3 {
+  .text {
+    &-#{get-size($i)} {
+      font-size: pow($font-multiplier, $i) * $font-base-size;
+      line-height: pow($font-multiplier, $i) * $line-height-base;
+    }
+  }
+
+  @mixin text {
+    &-#{get-size($i)} {
+      font-size: pow($font-multiplier, $i) * $font-base-size;
+      line-height: pow($font-multiplier, $i) * $line-height-base;
+    }
+  }
+}
