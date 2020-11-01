@@ -2,11 +2,13 @@
 @import "./colors";
 
 body {
+  font-family: 'Itim', cursive;
   background-color: get-color(secondary);
-  color: get-colors(primary);
+  color: get-color(primary);
   margin: auto;
   width: $max-screen-resized;
   max-width: $max-screen-fixed;
+
   &::selection {
     background-color: get-color(blush);
     color: get-color(secondary);

@@ -7,7 +7,7 @@ $border-radius: 3px;
 
 // typography
 $font-base-size: 1rem;
-$font-multiplier: 1.1;
+$font-multiplier: 1.2;
 $heading-base-size: 2.4rem;
 $heading-multiplier: 0.85;
 $heading-height-base: 2.8rem;
@@ -25,3 +25,6 @@ $size-idx: (
 // spacings
 $padding-base: 2px;
 $margin-base: 2px;
+@function set-padding($level) {
+  @return $padding-base * $level;
+}

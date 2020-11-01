@@ -1,1 +1,23 @@
 @import "./colors";
+
+button {
+  background-color: get-color(primary-accent);
+  color: get-color(secondary);
+  padding: set-padding(3) set-padding(8);
+  border: none;
+  border-radius: $border-radius;
+  font-family: 'Itim', cursive;
+
+  &.lg {
+    padding: set-padding(5) set-padding(10);
+  }
+
+  &.sm {
+    padding: set-padding(2) set-padding(5)
+  }
+
+  &.danger {
+    background-color: get-color(blush);
+    color: get-color(primary-accent);
+  }
+}

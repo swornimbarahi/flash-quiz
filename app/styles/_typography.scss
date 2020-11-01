@@ -2,7 +2,7 @@
 @import "./config";
 @import "./functions";
 
-@for $i from 1 to 6 {
+@for $i from 1 to 7 {
   h#{$i} {
     font-size: pow($heading-multiplier, $i) * $heading-base-size;
     line-height: pow($heading-multiplier, $i) * $heading-height-base;
@@ -31,11 +31,18 @@
   color: get-color($color);
 }
 
-@for $i from 1 to 3 {
+@for $i from 1 to 4 {
   .text {
     &-#{get-size($i)} {
       font-size: pow($font-multiplier, $i) * $font-base-size;
       line-height: pow($font-multiplier, $i) * $line-height-base;
     }
+  }
+}
+
+@for $i from 1 to 4 {
+  .#{get-size($i)} {
+    font-size: pow($font-multiplier, $i) * $font-base-size;
+    line-height: pow($font-multiplier, $i) * $line-height-base;
   }
 }
