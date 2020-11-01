@@ -1,0 +1,11 @@
+$colors: (
+  primary: #0F110C,
+  secondary: #DFF8EB,
+  primary-accent: #242423,
+  secondary-accent: #FFA5AB,
+  blush: #DA627D
+);
+
+@function get-color($key) {
+  @return map-get($colors, $key);
+}
