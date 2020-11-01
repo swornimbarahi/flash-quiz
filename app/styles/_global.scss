@@ -2,25 +2,13 @@
 @import "./colors";
 
 body {
-  background-color: get-color(primary);
+  background-color: get-color(secondary);
   color: get-colors(primary);
   margin: auto;
-}
-
-@media only screen and (min-width: 1001px) {
-  body {
-    max-width: $max-screen-desktop;
-  }
-}
-
-@media only screen and (min-width: 851px) {
-  body {
-    max-width: $max-screen-tablet;
-  }
-}
-
-@media only screen and (min-width: 451px) {
-  body {
-    max-width: $max-screen-mobile;
+  width: $max-screen-resized;
+  max-width: $max-screen-fixed;
+  &::selection {
+    background-color: get-color(blush);
+    color: get-color(secondary);
   }
 }
