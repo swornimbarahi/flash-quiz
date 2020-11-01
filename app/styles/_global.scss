@@ -1,0 +1,26 @@
+@import "./config";
+@import "./colors";
+
+body {
+  background-color: get-color(primary);
+  color: get-colors(primary);
+  margin: auto;
+}
+
+@media only screen and (min-width: 1001px) {
+  body {
+    max-width: $max-screen-desktop;
+  }
+}
+
+@media only screen and (min-width: 851px) {
+  body {
+    max-width: $max-screen-tablet;
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  body {
+    max-width: $max-screen-mobile;
+  }
+}
