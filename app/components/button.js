@@ -8,5 +8,8 @@ export default Component.extend({
     let { size = "md", inverted = false, danger = false } = this;
 
     return classnames([size, { inverted: !!inverted, danger: !!danger }]);
-  })
+  }),
+  click() {
+    alert("Button was clicked");
+  }
 });

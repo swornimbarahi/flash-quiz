@@ -1,12 +1,14 @@
 @import "./colors";
 
 button {
-  background-color: get-color(primary-accent);
-  color: get-color(secondary);
+  background-color: get-color(secondary-accent);
+  color: get-color(primary);
   padding: set-padding(3) set-padding(8);
   border: none;
   border-radius: $border-radius;
   font-family: 'Itim', cursive;
+  cursor: pointer;
+  transition: 0.4s;
 
   &.lg {
     padding: set-padding(5) set-padding(10);
@@ -16,8 +18,16 @@ button {
     padding: set-padding(2) set-padding(5)
   }
 
+  &:hover {
+    background-color: rgba(get-color(secondary-accent), 0.8);
+  }
+
   &.danger {
     background-color: get-color(blush);
     color: get-color(primary-accent);
+
+    &:hover {
+      background-color: rgba(get-color(blush), 0.8);
+    }
   }
 }
